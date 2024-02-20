@@ -29,4 +29,11 @@ class Library
 		end
 		first_book.publication_year
 	end
+
+	def last_book_year(author)
+		last_book = author.books.max_by do |book|
+			book.publication_year.to_i
+		end
+		last_book.publication_year
+	end
 end
