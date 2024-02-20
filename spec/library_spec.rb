@@ -30,10 +30,11 @@ RSpec.describe Library do
 
 	describe '#add_author' do
 		it 'can add an author to the authors array' do
+			require 'pry'; binding.pry
 			@dpl.add_author(@charlotte_bronte)
 			@dpl.add_author(@harper_lee)
 
-			expect(@dpl.books).to eq [@charlotte_bronte, @harper_lee]
+			expect(@dpl.authors).to eq [@charlotte_bronte, @harper_lee]
 		end
 	end
 end
