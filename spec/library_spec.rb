@@ -23,17 +23,29 @@ RSpec.describe Library do
 		end
 
 		it 'starts with an empty array of books and authors by default' do
-			expect(@dpl.books).to eq []
 			expect(@dpl.authors).to eq []
 		end
 	end
 
 	describe '#add_author' do
 		it 'can add an author to the authors array' do
+			expect(@dpl.authors).to eq []
+			
 			@dpl.add_author(@charlotte_bronte)
 			@dpl.add_author(@harper_lee)
 
 			expect(@dpl.authors).to eq [@charlotte_bronte, @harper_lee]
+		end
+	end
+
+	describe '#books' do
+		it 'can add books to the books array' do
+			expect(@dpl.books).to eq []
+			
+			@dpl.add_author(@charlotte_bronte)
+			@dpl.add_author(@harper_lee)
+
+			expect(@dpl.books).to eq [@jane_eyre, @professor, @villette, @mockingbird]
 		end
 	end
 end
