@@ -1,3 +1,5 @@
+require './lib/author'
+
 class Book
 	attr_reader :title, :author, :publication_year
 
