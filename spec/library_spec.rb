@@ -64,4 +64,13 @@ RSpec.describe Library do
 			expect(@dpl.publication_time_frame(@charlotte_bronte)).to eq ( { :start => "1847", :end => "1857" } )
 		end
 	end
+
+	describe '#checkout' do
+		it 'starts with an empty array of checked out books' do
+			@dpl.add_author(@charlotte_bronte)
+			@dpl.add_author(@harper_lee)
+
+			expect(@dpl.checked_out_books).to eq []
+		end
+	end
 end
