@@ -21,4 +21,13 @@ RSpec.describe Author do
 			expect(charlotte_bronte.books).to eq []
   	end
 	end
+
+	describe '#write' do
+    it 'creates a new book object when called' do
+			charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
+			jane_eyre = charlotte_bronte.write("Jane Eyre", "October 16, 1847")
+
+      expect(jane_eyre).to be_an_instance_of Book
+    end
+	end
 end
