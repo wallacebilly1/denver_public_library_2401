@@ -72,5 +72,11 @@ RSpec.describe Library do
 
 			expect(@dpl.checked_out_books).to eq []
 		end
+
+		it 'cannot check out a book if it is not in the library' do
+			@dpl.add_author(@charlotte_bronte)
+
+			expect(@dpl.checkout(@mockingbird)).to be false
+		end
 	end
 end
