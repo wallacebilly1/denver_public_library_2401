@@ -93,4 +93,18 @@ RSpec.describe Library do
 			expect(@dpl.checked_out_books).to eq [@jane_eyre, @professor]
 		end
 	end
+
+	describe '#return' do
+		it 'can return a book and it removes it from the checked_out_books array' do
+			@dpl.add_author(@charlotte_bronte)
+			@dpl.checkout(@jane_eyre)
+			@dpl.checkout(@professor)
+
+			expect(@dpl.checked_out_books).to eq [@jane_eyre, @professor]
+
+			@dpl.return(@jane_eyre)
+
+			expect(@dpl.checked_out_books).to eq [@professor]
+		end
+	end
 end
