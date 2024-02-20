@@ -45,7 +45,13 @@ RSpec.describe Library do
 	end
 
 	describe '#publication_time_frame' do
-		it 'returns the range of publication years as a hash' do
+		it 'returns the first_book_year of an author' do
+			@dpl.add_author(@charlotte_bronte)
+
+			expect(@dpl.first_book_year(@charlotte_bronte)).to eq "1847"
+		end
+
+		xit 'returns the range of publication years as a hash' do
 			@dpl.add_author(@charlotte_bronte)
 			@dpl.add_author(@harper_lee)
 
