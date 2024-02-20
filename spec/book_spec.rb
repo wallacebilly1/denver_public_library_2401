@@ -13,5 +13,9 @@ RSpec.describe Book do
 		it 'can display the title' do
 			expect(@book.title).to eq "To Kill a Mockingbird"
 		end
+
+		it 'can display the author' do
+			expect(@book.author).to eq "Harper Lee"
+  	end	
 	end
 end
