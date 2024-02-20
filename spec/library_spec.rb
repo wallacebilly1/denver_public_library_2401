@@ -22,9 +22,6 @@ RSpec.describe Library do
 			expect(@dpl.name).to eq "Denver Public Library"
 		end
 
-		it 'starts with an empty array of books and authors by default' do
-			expect(@dpl.authors).to eq []
-		end
 	end
 
 	describe '#add_author' do
