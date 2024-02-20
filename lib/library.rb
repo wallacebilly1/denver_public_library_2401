@@ -18,9 +18,7 @@ class Library
 	end
 
 	def publication_time_frame(author)
-		author.books.min_by do |book|
-			book.publication_year.to_i
-		end
+		{:start => first_book_year(author), :end => last_book_year(author)}
 	end
 
 	def first_book_year(author)
