@@ -67,7 +67,7 @@ pry(main)> charlotte_bronte.books
 #=> [#<Book:0x00007fb896e22538...>, #<Book:0x00007fb8980aaca0...>]
 ```
 
-## Iteration 2 - got to here after 1 hour.
+## Iteration 2
 
 Use TDD to create a `Library` class that responds to the following interaction pattern.
 
@@ -120,7 +120,7 @@ pry(main)> dpl.books
 => [#<Book:0x00007fbeeb3beca8...>, #<Book:0x00007fbeea8efd90...>, #<Book:0x00007fbeea24fbe8...>, #<Book:0x00007fbeeb1089f0...>]
 ```
 
-## Iteration 3
+## Iteration 3 - 1 hour, 20 mins remaining
 
 Use TDD to implement the following methods on the `Library` class:
 
