@@ -67,7 +67,7 @@ pry(main)> charlotte_bronte.books
 #=> [#<Book:0x00007fb896e22538...>, #<Book:0x00007fb8980aaca0...>]
 ```
 
-## Iteration 2
+## Iteration 2 - got to here after 1 hour.
 
 Use TDD to create a `Library` class that responds to the following interaction pattern.
 
