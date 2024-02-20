@@ -2,9 +2,11 @@ require './lib/book'
 require './lib/author'
 
 class Library
-	attr_reader :name
+	attr_reader :name, :books, :authors
 
 	def initialize(library_name)
 		@name = library_name
+		@books = []
+		@authors = []
 	end
 end
