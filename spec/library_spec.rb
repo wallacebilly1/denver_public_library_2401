@@ -75,7 +75,7 @@ RSpec.describe Library do
 
 		it 'cannot check out a book if it is not in the library' do
 			@dpl.add_author(@charlotte_bronte)
-
+			# require 'pry'; binding.pry
 			expect(@dpl.checkout(@mockingbird)).to be false
 		end
 
@@ -83,7 +83,7 @@ RSpec.describe Library do
 			@dpl.add_author(@charlotte_bronte)
 
 			expect(@dpl.checkout(@jane_eyre)).to be true
-			expect(@dpl.checked_out_books).to contain(@jane_eyre)
+			expect(@dpl.checked_out_books).to eq [@jane_eyre]
 		end
 	end
 end
