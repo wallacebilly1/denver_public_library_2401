@@ -38,10 +38,18 @@ RSpec.describe Library do
 			expect(@dpl.books).to eq []
 			
 			@dpl.add_author(@charlotte_bronte)
-
 			@dpl.add_author(@harper_lee)
 			
 			expect(@dpl.books).to eq [@jane_eyre, @professor, @villette, @mockingbird]
+		end
+	end
+
+	describe '#publication_time_frame' do
+		it 'returns the range of publication years as a hash' do
+			@dpl.add_author(@charlotte_bronte)
+			@dpl.add_author(@harper_lee)
+
+			expect(@dpl.publication_time_frame(@charlotte_bronte)).to eq ( { :start => "1847", :end => "1853" } )
 		end
 	end
 end
